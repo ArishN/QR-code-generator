@@ -3,30 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="shortcut icon" href="assets/images/qrcode.png" type="image/x-icon">
+<meta name = "keywords" content = "QR,Qr code,QR code genarator" />
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Qrgendom</title>
 </head>
 <body>
     <div class="container">
         <div class="container-inner">
 
 <div class="left-container">
+    <div class="header">QRgendom</div>
     <div class="left-inner">
-        <input type="text" name="inputText" id="inputText">
+        <div class="inputContainer">
+        <input type="text" placeholder=" " name="inputText" id="inputText" class="inputText"><br>
+        <label for="inputText">Enter Your Text...</label>
     </div>
+    <button class="convert-btn" id="convertBtn">Convert</button>
+    </div>
+    
 </div>
 <div class="right-container">
     <div class="img-container">
-    <img src="assets/images/qrcode.png" alt="QrCode Images" srcset="assets/images/qrcode.png" id="QrImage" class="qr-image">
+    <img src="assets/images/qrcode.png" alt="QrCode Images" id="QrImage" class="qr-image">
 </div>
     <div class="download-container">
-    <button class="download-btn" id="downloadBtn">Download</button>
+    <a href="" class="download-btn" id="downloadJpgBtn" download="Qr_click_to_gain"><i class="ri-download-2-line"></i> JPG</a>
+    <a href="" class="download-btn" id="downloadPngBtn" download="Qr_click_to_gain"><i class="ri-download-2-line"></i> PNG</a>
 </div>
+<div class="footer"><p class="footer-text">© Copyright <b><a href="https://www.youtube.com/channel/UCaCkXMc5JYTA_CcLY8Cb4WA">Click To gain</a></b>. All Rights Reserved</p></div>
 </div>
 
 
 
         </div>
     </div>
+
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

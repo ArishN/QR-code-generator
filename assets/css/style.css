@@ -1,63 +1,238 @@
-:root {
-    --primary-color: #98FB98;
-    --secondary-color: #f7fdf1;
+  @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+
+  :root {
+      --primary-color: #98FB98;
+      --secondary-color: #f7fdf1;
+      --text-color: rgb(88, 88, 88);
+  }
+
+
+  * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Red Hat Display', sans-serif;
+  }
+
+  .container {
+      width: 100%;
+      height: 100vh;
+      background: var(--secondary-color);
+      padding: 10px;
+  }
+
+  .container-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+  }
+
+
+  .left-container {
+      flex: 2;
+      padding: 20px;
+    
+  }
+  .header{
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(65, 65, 65);
+    top: 15px;
+    position: fixed;
+
+  }
+.footer{
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+   
+}
+.footer-text a{
+    text-decoration: none;
+    color: #000;
+}
+  .right-container {
+      background: var(--primary-color);
+      flex: 1;
+      height: 100%;
+      border-radius: 20px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .right-container .img-container {
+      flex: 1;
+  }
+
+  .right-container .qr-image {
+      width: 250px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .right-container .download-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+  }
+
+  .right-container .download-container .download-btn {
+
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-weight: 400;
+      outline: none;
+      height: fit-content;
+      border: none;
+      text-decoration: none;
+      text-align: center;
+      width: 80%;
+      color: #fff;
+      background: #4c9173;
+      cursor: pointer;
+  }
+
+  .right-container .download-container .download-btn:hover {
+      opacity: 0.8;
+  }
+
+  .inputContainer {
+      position: relative;
+      cursor: text;
+  }
+
+  .inputText {
+      width: 100%;
+      height: 50px;
+      border: none;
+      outline: none;
+      font-size: 20px;
+      border-bottom: 2px solid var(--primary-color);
+
+  }
+
+  .inputContainer label {
+      position: absolute;
+      top: -40px;
+      left: 10px;
+      font-size: 80px;
+      transition: 0.5s;
+      cursor: text !important;
+      color: var(--text-color);
+  }
+
+  .inputText:focus~label {
+      font-size: 30px;
+      top: -35px;
+  }
+
+  .convert-btn {
+      padding: 10px 80px;
+      margin-top: 20px;
+      border: none;
+      background: var(--primary-color);
+      font-size: 20px;
+      cursor: pointer;
+  }
+
+  .convert-btn:hover {
+      opacity: 0.9;
+  }
+
+  .inputText:not(:placeholder-shown)~label {
+      font-size: 30px;
+      top: -35px;
+  }
+
+
+  @media only screen and (max-width:1020px) {
+
+
+      .inputContainer label {
+          top: -10px;
+          font-size: 50px;
+
+
+      }
+      .left-container{
+        width: 100%;
+      }
+
+      .inputText:not(:placeholder-shown)~label {
+          font-size: 20px;
+          top: -10px;
+      }
+  }
+
+  @media only screen and (max-width:760px) {
+    .container{
+        padding: 10px;
+        height: 100%;
+    }
+      .container-inner {
+          flex-direction: column;
+
+
+      }
+      .header{
+        position: inherit;
+        margin-bottom: 20px;
+        font-size: 25px;
+    
+      }
+    .footer{
+       position: inherit;
+       margin: 10px 0;
+    }
+
+
+      .inputContainer label {
+          top: 0;
+          left: 10px;
+          font-size: 30px;
+
+      }
+
+      .inputText:not(:placeholder-shown)~label {
+          font-size: 20px;
+          top: -10px;
+      }
+      .inputText:focus~label {
+        font-size: 20px;
+        top: -10px;
+    }
+  }
+
+
+  @media only screen and (max-width:640px) {
+    .inputContainer{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+      .inputContainer label {
+          top: 0;
+          left: 10px;
+          font-size: 20px;
+
+      }
+
+      .inputText:not(:placeholder-shown)~label {
+          font-size: 15px;
+          top: -10px;
+      }
+      
+  .inputText:focus~label {
+    font-size: 20px;
+    top: -15px;
 }
 
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-.container {
-    width: 100%;
-    height: 100vh;
-    background: var(--secondary-color);
-    padding: 10px;
-}
-
-.container-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-}
-
-
-.left-container {
-    flex: 2;
-}
-
-.right-container {
-    background: var(--primary-color);
-    flex: 1;
-    height: 100%;
-    border-radius: 20px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-.right-container .img-container {
-    flex: 1;
-}
-
-.right-container .qr-image {
-    width: 250px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.right-container .download-container {
-    flex: 1;
-    background: red;
-
-}
-
-.right-container .download-container .download-btn {
-    display: block;
-
-}
+  }
