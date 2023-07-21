@@ -20,7 +20,9 @@
       width: 100%;
       height: 100vh;
       background: var(--secondary-color);
+      overflow: hidden;
       padding: 10px;
+      position: relative;
   }
 
   .container-inner {
@@ -36,6 +38,9 @@
       flex: 2;
       padding: 20px;
     
+  }
+  .left-inner{
+    z-index: 1000 !important;
   }
   .header{
     font-weight: bold;
@@ -143,7 +148,14 @@
       font-size: 20px;
       cursor: pointer;
   }
-
+.background-img{
+    width: 25%;
+    position: absolute;
+    bottom: -10%;
+    opacity: 0.2;
+    left: -7%;
+    z-index: 0;
+}
   .convert-btn:hover {
       opacity: 0.9;
   }
@@ -182,6 +194,9 @@
           flex-direction: column;
 
 
+      }
+      .background-img{
+        display: none;
       }
       .header{
         position: inherit;
